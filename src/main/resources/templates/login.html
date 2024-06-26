@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Login Page</title>
+		<link rel="stylesheet" href="/login.css">
+	</head>
+	<body>
+		<div id=page>
+        <div id="page-container">
+            <header>
+                <div class="logo">
+                    <a href="/">DXC LoginApplication</a>
+                </div>
+                <div class="shop-menu">
+                    <nav>
+                        <a href="/login">Login</a>
+                        <a href="/welcome">Welcome</a>
+                    </nav>
+                </div>
+            </header>
+			
+			
+			<h1>Login</h1>
+			<form method="post" action="login">
+				<input type="text" name="username" placeholder="Enter username"> <br>
+				<input type="password" name="password" placeholder="Enter password"> <br>
+				<input type="submit" value="Login" class="login-button">
+			</form>
+			<div th:if="${param.error}">
+   				 <p style="color: red;">"Invalid userid or password</p>
+			</div>
+			<div th:if="${param.logout}">
+   				 <p style="color: blue;">Successfully Logged Out.</p>
+			</div>
+		</div>
+    	</div> 
+	</body>
+</html>

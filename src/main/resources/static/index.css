@@ -1,0 +1,64 @@
+/* General Settings */
+* { box-sizing: border-box;}
+
+:root { 
+    --headerbg: #e9eff1;
+    --bodybg: #a0a0a0;
+    --onhover: #d3d3d3;
+}
+
+body {
+    background: var(--bodybg);
+    margin: 0;
+}
+
+#page-container{
+    width: 80%;
+    background: white;
+    margin: auto;
+}
+
+#login_status{
+	color: blue; 
+    text-decoration: underline; 
+    text-align: right;
+}
+
+a {text-decoration: none;}
+
+a:link, a:visited, a:active {color:grey}
+
+img {max-width: 100%;}
+
+h3 {color:black}
+
+/* ---------------------------------------- */
+/* Header settings */
+
+header {
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 0.5%;
+    background: var(--headerbg);
+}
+
+
+.shop-menu{
+    justify-self: end;
+    margin-top: 1vh; 
+} 
+
+.shop-menu a{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 1em;
+}
+
+.shop-menu a:hover{border-bottom: 0.3vh solid grey;}
+
+/* ---------------------------------------- */
+
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+    * {font-size: 0.95em;}
+    #pop-up { height: 50%;}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Login Application Main Page</title>
+		<link rel="stylesheet" href="/index.css">
+	</head>
+	<body>
+		<div id=page>
+        <div id="page-container">
+            <header>
+                <div class="logo">
+                    <a href="/">DXC LoginApplication</a>
+                </div>
+                <div class="shop-menu">
+                    <nav>
+                        <a href="/login">Login</a>
+                        <a href="/welcome">Welcome</a>
+                    </nav>
+                </div>
+            </header>
+			<div id = login_status>
+				<div th:if="${session.loggedUser != null}">
+				    <p>Hello, <span th:text="${session.loggedUser.username}"></span></p>
+				    <p><a href="logout">Logout</a><p>
+				</div>
+				<div th:unless="${session.loggedUser != null}">
+				    <p>Not logged in</p>
+				</div>
+			</div>
+			<h1>LoginApplication. Login!</h1>
+		</div>
+    	</div> 
+	</body>
+</html>
